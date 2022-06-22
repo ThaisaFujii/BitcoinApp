@@ -1,0 +1,6 @@
+framework module Pods_BitcoinProject {
+  umbrella header "Pods-BitcoinProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

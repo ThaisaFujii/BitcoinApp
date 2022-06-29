@@ -32,36 +32,18 @@
  */
 
 import SwiftUI
-import Alamofire
 
 struct DetailView: View {
-    @Binding var bitcoinDetail: Coin // variavel que realiza coneccao de duas vias entre o dado/item que a propriedade recebe
-    @State private var isLoading = true
-    @State private var isCompleted = false // variavel que ativa a view quando os dados da API chega no sistema
-    
-    
-    // funcao que pega o item da coinList da API e mostra somente os detalhes do item selecionado
-    func getCoinItem(){
-        // injetar erro no coins
-        AF.request("https://api.coinpaprika.com/v1/coins/\(bitcoinDetail.id ?? "")", method: .get).responseDecodable(of: Coin.self, decoder: JSONDecoder()){ response in // callback
-            isLoading = false
-            switch response.result {
-            case .success(let data):
-                isCompleted = true
-                bitcoinDetail.tags = data.tags
-                bitcoinDetail.team = data.team
-                bitcoinDetail.description = data.description
-                print(data)
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
+    @StateObject var detailvm = DetailVM()
+  //  @StateObject var callcoinitem = GetCoinItemVM()
+    // view depende dos detalhes para ser alimentada
+    // nao ter logica n significa nao ter atributos
+    @Binding var bitcoinDetail: Coin
     
     var body: some View {
         ScrollView {
             // verificacao se os dados do backend vieram, se nao vieram ira aparecer loading pro usuario
-            if isLoading == true {
+            if detailvm.isLoading == true {
                 HStack {
                     Spacer()
                     ProgressView()
@@ -69,9 +51,14 @@ struct DetailView: View {
                 }
                 // ativa a funcao que puxa dados da API para poder mostrar na tela
                 .onAppear {
-                    getCoinItem()
+                    // quando o callback for chamado
+                    detailvm.getCoinItem(id: bitcoinDetail.id ?? ""){ value in
+                        bitcoinDetail.tags = value.tags
+                        bitcoinDetail.description = value.description
+                        bitcoinDetail.team = value.team
+                    }
                 }
-            } else if isCompleted == true { // verifica se o backend criou os dados para "captura"
+            } else if detailvm.isCompleted == true { // verifica se o backend criou os dados para "captura"
                 VStack(alignment: .leading) {
                     HStack {
                         Spacer()
@@ -105,7 +92,7 @@ struct DetailView: View {
                     }
                     // nunca usar .infinity com width ou soh height
                     .frame(maxWidth: .infinity)
-                    .modifier(Style())
+                    .modifier(DetailViewStyle())
                     .padding(10)
                     
                     Spacer()
@@ -143,7 +130,7 @@ struct DetailView: View {
                             }
                         }
                         .padding(20)
-                        .modifier(Style())
+                        .modifier(DetailViewStyle())
                         .padding(14)
                         .frame(maxWidth: .infinity)
                         
@@ -169,21 +156,18 @@ struct DetailView: View {
                             }
                         }
                         
-                        .modifier(Style())
+                        .modifier(DetailViewStyle())
                         .padding(10)
                     }
-                    .onAppear{
-                        getCoinItem()
-                    }
                 }
-            }else {
+            } else {
                 // view de erro para quando nao foi identificado nenhum dado vindo do backend
                 VStack {
                     Image("error")
                     Text("Ocorreu um problema! Nao foi possivel carregar as informacoes.")
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 32)
-                    Text("Tentar Novamente").onTapGesture{isLoading = true}
+                    Text("Tentar Novamente").onTapGesture{detailvm.isLoading = true}
                         .modifier(ButtonStyle())
                 }
                 .padding(.horizontal, 50)
@@ -194,17 +178,6 @@ struct DetailView: View {
     }
 }
 
-// estrutura de estilo para o conteudo a mostra
-struct Style: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(Font.custom("Poppins-Medium", size: 16))
-            .frame(maxWidth: .infinity)
-            .background(Color("backgroundCard"))
-            .cornerRadius(16)
-            .shadow(color: Color("shadowCard").opacity(0.07), radius: 20, y: CGFloat(10))
-    }
-}
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         DetailView(bitcoinDetail: .constant(Coin()))

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F331D05284934E400CE1A38 /* DataBitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F331D04284934E400CE1A38 /* DataBitcoin.swift */; };
+		1F1D16842866511C006FA093 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D16832866511C006FA093 /* LoginVM.swift */; };
+		1F1D16862866516E006FA093 /* BemVindoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D16852866516E006FA093 /* BemVindoVM.swift */; };
+		1F1D168828665212006FA093 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D168728665212006FA093 /* CoinModel.swift */; };
 		1F35C4EB284793D5001AF385 /* BitcoinProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35C4EA284793D5001AF385 /* BitcoinProjectApp.swift */; };
 		1F35C4ED284793D5001AF385 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35C4EC284793D5001AF385 /* ContentView.swift */; };
 		1F35C4EF284793DB001AF385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F35C4EE284793DB001AF385 /* Assets.xcassets */; };
@@ -17,6 +19,12 @@
 		1F35C4FD2847D8D3001AF385 /* BemVindoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35C4FC2847D8D3001AF385 /* BemVindoView.swift */; };
 		1F35C4FF2847FBC6001AF385 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35C4FE2847FBC6001AF385 /* LoginView.swift */; };
 		1F35C5032847FDCE001AF385 /* SecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35C5022847FDCE001AF385 /* SecurityView.swift */; };
+		1F4C90CD286A3B9A00797A67 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C90CC286A3B9A00797A67 /* Constants.swift */; };
+		1F4C90D2286A3EB700797A67 /* AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C90D1286A3EB700797A67 /* AppStyles.swift */; };
+		1FC423992869F6B300ACAD68 /* AccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC423982869F6B300ACAD68 /* AccountVM.swift */; };
+		1FC4239B2869FB2C00ACAD68 /* DetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4239A2869FB2C00ACAD68 /* DetailVM.swift */; };
+		1FC4239D286A268600ACAD68 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4239C286A268600ACAD68 /* TeamModel.swift */; };
+		1FC4239F286A26B500ACAD68 /* TagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4239E286A26B500ACAD68 /* TagModel.swift */; };
 		1FEE052928491D2F00A706AC /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FEE0528284918B200A706AC /* Poppins-Bold.ttf */; };
 		1FEE052A28491D3300A706AC /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FEE0527284918B200A706AC /* Poppins-Medium.ttf */; };
 		1FEE052B28491D3900A706AC /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FEE0525284918B100A706AC /* Poppins-Regular.ttf */; };
@@ -25,7 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F331D04284934E400CE1A38 /* DataBitcoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBitcoin.swift; sourceTree = "<group>"; };
+		1F1D16832866511C006FA093 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		1F1D16852866516E006FA093 /* BemVindoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BemVindoVM.swift; sourceTree = "<group>"; };
+		1F1D168728665212006FA093 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		1F35C4E7284793D5001AF385 /* BitcoinProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F35C4EA284793D5001AF385 /* BitcoinProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinProjectApp.swift; sourceTree = "<group>"; };
 		1F35C4EC284793D5001AF385 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,11 +46,17 @@
 		1F35C4FC2847D8D3001AF385 /* BemVindoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BemVindoView.swift; sourceTree = "<group>"; };
 		1F35C4FE2847FBC6001AF385 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1F35C5022847FDCE001AF385 /* SecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityView.swift; sourceTree = "<group>"; };
+		1F4C90CC286A3B9A00797A67 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1F4C90D1286A3EB700797A67 /* AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyles.swift; sourceTree = "<group>"; };
+		1FC423982869F6B300ACAD68 /* AccountVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVM.swift; sourceTree = "<group>"; };
+		1FC4239A2869FB2C00ACAD68 /* DetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVM.swift; sourceTree = "<group>"; };
+		1FC4239C286A268600ACAD68 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		1FC4239E286A26B500ACAD68 /* TagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModel.swift; sourceTree = "<group>"; };
 		1FEE0525284918B100A706AC /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		1FEE0526284918B200A706AC /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		1FEE0527284918B200A706AC /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		1FEE0528284918B200A706AC /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		1FEE052D2849207C00A706AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1FEE052D2849207C00A706AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B618016363DD4C37280E83 /* Pods_BitcoinProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4122D26167427A59B7B007BD /* Pods-BitcoinProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinProject.release.xcconfig"; path = "Target Support Files/Pods-BitcoinProject/Pods-BitcoinProject.release.xcconfig"; sourceTree = "<group>"; };
 		D585A69DE70C7443C5B1144D /* Pods-BitcoinProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinProject.debug.xcconfig"; path = "Target Support Files/Pods-BitcoinProject/Pods-BitcoinProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +74,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F1D1671286632E8006FA093 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F1D168728665212006FA093 /* CoinModel.swift */,
+				1FC4239C286A268600ACAD68 /* TeamModel.swift */,
+				1FC4239E286A26B500ACAD68 /* TagModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1F1D16722866331D006FA093 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C90D5286A444F00797A67 /* CreateAccount */,
+				1F4C90D4286A444300797A67 /* Login */,
+				1F1D167328663346006FA093 /* BuscaCoin */,
+				1F4C90DD286A45CD00797A67 /* DetailCoin */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		1F1D167328663346006FA093 /* BuscaCoin */ = {
+			isa = PBXGroup;
+			children = (
+				1F1D167628663379006FA093 /* Presentation */,
+				1F1D167428663350006FA093 /* ViewModels */,
+			);
+			path = BuscaCoin;
+			sourceTree = "<group>";
+		};
+		1F1D167428663350006FA093 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1F1D16852866516E006FA093 /* BemVindoVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1F1D167628663379006FA093 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1F1D167828663396006FA093 /* PagesViews */,
+				1F1D16772866338D006FA093 /* Widgets */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1F1D16772866338D006FA093 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		1F1D167828663396006FA093 /* PagesViews */ = {
+			isa = PBXGroup;
+			children = (
+				1F35C4FC2847D8D3001AF385 /* BemVindoView.swift */,
+			);
+			path = PagesViews;
+			sourceTree = "<group>";
+		};
 		1F35C4DE284793D5001AF385 = {
 			isa = PBXGroup;
 			children = (
@@ -79,17 +157,12 @@
 		1F35C4E9284793D5001AF385 /* BitcoinProject */ = {
 			isa = PBXGroup;
 			children = (
+				1F4C90D3286A3FE700797A67 /* Assistents */,
+				1F4C90CE286A3DCF00797A67 /* Core */,
 				1FEE052D2849207C00A706AC /* Info.plist */,
-				1F35C4EA284793D5001AF385 /* BitcoinProjectApp.swift */,
-				1F35C4EC284793D5001AF385 /* ContentView.swift */,
-				1F35C5022847FDCE001AF385 /* SecurityView.swift */,
-				1F35C4FE2847FBC6001AF385 /* LoginView.swift */,
+				1F1D16722866331D006FA093 /* Features */,
+				1F1D1671286632E8006FA093 /* Models */,
 				1FEE0524284917C000A706AC /* Fonts */,
-				1F35C4F82847D7C7001AF385 /* AccountView.swift */,
-				1F35C4FA2847D7FB001AF385 /* DetailView.swift */,
-				1F35C4FC2847D8D3001AF385 /* BemVindoView.swift */,
-				1F331D04284934E400CE1A38 /* DataBitcoin.swift */,
-				1F35C4EE284793DB001AF385 /* Assets.xcassets */,
 				1F35C4F0284793DB001AF385 /* Preview Content */,
 			);
 			path = BitcoinProject;
@@ -101,6 +174,165 @@
 				1F35C4F1284793DB001AF385 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1F4C90CA286A3B5F00797A67 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C90CC286A3B9A00797A67 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1F4C90CE286A3DCF00797A67 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C90D0286A3E7A00797A67 /* Styles */,
+				1F4C90CF286A3DEE00797A67 /* Widgets */,
+				1F4C90CA286A3B5F00797A67 /* Utils */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1F4C90CF286A3DEE00797A67 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				1F35C5022847FDCE001AF385 /* SecurityView.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		1F4C90D0286A3E7A00797A67 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C90D1286A3EB700797A67 /* AppStyles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		1F4C90D3286A3FE700797A67 /* Assistents */ = {
+			isa = PBXGroup;
+			children = (
+				1F35C4EA284793D5001AF385 /* BitcoinProjectApp.swift */,
+				1F35C4EC284793D5001AF385 /* ContentView.swift */,
+				1F35C4EE284793DB001AF385 /* Assets.xcassets */,
+			);
+			path = Assistents;
+			sourceTree = "<group>";
+		};
+		1F4C90D4286A444300797A67 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C90D6286A446200797A67 /* Presentation */,
+				1F4C90DB286A457400797A67 /* ViewModels */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1F4C90D5286A444F00797A67 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C90D9286A455600797A67 /* Presentation */,
+				1F4C90DC286A458F00797A67 /* ViewModels */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		1F4C90D6286A446200797A67 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C90D7286A446B00797A67 /* PagesViews */,
+				1F4C90D8286A448C00797A67 /* Widgets */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1F4C90D7286A446B00797A67 /* PagesViews */ = {
+			isa = PBXGroup;
+			children = (
+				1F35C4FE2847FBC6001AF385 /* LoginView.swift */,
+			);
+			path = PagesViews;
+			sourceTree = "<group>";
+		};
+		1F4C90D8286A448C00797A67 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		1F4C90D9286A455600797A67 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C90DA286A455E00797A67 /* PagesViews */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1F4C90DA286A455E00797A67 /* PagesViews */ = {
+			isa = PBXGroup;
+			children = (
+				1F35C4F82847D7C7001AF385 /* AccountView.swift */,
+			);
+			path = PagesViews;
+			sourceTree = "<group>";
+		};
+		1F4C90DB286A457400797A67 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1F1D16832866511C006FA093 /* LoginVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1F4C90DC286A458F00797A67 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1FC423982869F6B300ACAD68 /* AccountVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1F4C90DD286A45CD00797A67 /* DetailCoin */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C90DE286A46CB00797A67 /* Presentation */,
+				1F4C90DF286A46D200797A67 /* ViewModels */,
+			);
+			path = DetailCoin;
+			sourceTree = "<group>";
+		};
+		1F4C90DE286A46CB00797A67 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C90E1286A46F000797A67 /* Widgets */,
+				1F4C90E0286A46E600797A67 /* PagesViews */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1F4C90DF286A46D200797A67 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1FC4239A2869FB2C00ACAD68 /* DetailVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1F4C90E0286A46E600797A67 /* PagesViews */ = {
+			isa = PBXGroup;
+			children = (
+				1F35C4FA2847D7FB001AF385 /* DetailView.swift */,
+			);
+			path = PagesViews;
+			sourceTree = "<group>";
+		};
+		1F4C90E1286A46F000797A67 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 		1FEE0524284917C000A706AC /* Fonts */ = {
@@ -128,7 +360,6 @@
 				D585A69DE70C7443C5B1144D /* Pods-BitcoinProject.debug.xcconfig */,
 				4122D26167427A59B7B007BD /* Pods-BitcoinProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -250,14 +481,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1D168828665212006FA093 /* CoinModel.swift in Sources */,
 				1F35C4FF2847FBC6001AF385 /* LoginView.swift in Sources */,
 				1F35C4F92847D7C7001AF385 /* AccountView.swift in Sources */,
 				1F35C4FD2847D8D3001AF385 /* BemVindoView.swift in Sources */,
 				1F35C5032847FDCE001AF385 /* SecurityView.swift in Sources */,
+				1F4C90CD286A3B9A00797A67 /* Constants.swift in Sources */,
+				1FC4239D286A268600ACAD68 /* TeamModel.swift in Sources */,
+				1F1D16862866516E006FA093 /* BemVindoVM.swift in Sources */,
 				1F35C4FB2847D7FB001AF385 /* DetailView.swift in Sources */,
+				1FC4239F286A26B500ACAD68 /* TagModel.swift in Sources */,
+				1FC4239B2869FB2C00ACAD68 /* DetailVM.swift in Sources */,
+				1F1D16842866511C006FA093 /* LoginVM.swift in Sources */,
+				1FC423992869F6B300ACAD68 /* AccountVM.swift in Sources */,
 				1F35C4ED284793D5001AF385 /* ContentView.swift in Sources */,
-				1F331D05284934E400CE1A38 /* DataBitcoin.swift in Sources */,
 				1F35C4EB284793D5001AF385 /* BitcoinProjectApp.swift in Sources */,
+				1F4C90D2286A3EB700797A67 /* AppStyles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var login:String = "" //encapsular
-    @State private var password:String = ""
-    @State private var showingAlert = false
-    @State var verified = false
-    // criar os booleans para navigationlink
+    @ObservedObject var loginview = LoginVM()
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -23,33 +20,33 @@ struct LoginView: View {
                         .frame(maxWidth: .infinity)
                 }
                 Spacer()
-                HStack{
+                HStack {
                     Image("UserIcon")
                         .frame(width: 18, height: 18)
-                    TextField("Login", text: $login)
+                    TextField("Login", text: $loginview.login)
                         .font(Font.custom("Poppins-Regular", size: 12))
                 }
                     .modifier(ConfStyle())
                     .padding(.bottom, 32)
-                SecurityView(text: $password)
+                SecurityView(text: $loginview.password)
                     .modifier(ConfStyle())
                     .padding(.bottom, 72)
 
-                NavigationLink(destination: BemVindoView(), isActive: $verified){} //criar navigation vazio
+                NavigationLink(destination: BemVindoView(), isActive: $loginview.verified){} //criar navigation vazio
                 Button(action: {
-                    isCredentialValid()
+                    loginview.isCredentialValid()
                 }, label: {
                     Text("Acessar")
                         .modifier(ButtonStyle()) // radius = blur
                 })
                 .padding(.bottom, 42)
-                .alert(isPresented:$showingAlert) {
+                .alert(isPresented:$loginview.showingAlert) {
                     Alert(
                         title: Text("As informações não são válidas."),
                         message: Text("Por favor colocar o login e a senha")
                     )
                 }
-                NavigationLink(destination: AccountView()){
+                NavigationLink(destination: AccountView()) {
                     Text("Criar Nova Conta")
                         .foregroundColor(Color("blue"))
                         .font(Font.custom("Poppins-Regular", size: 16))
@@ -59,40 +56,8 @@ struct LoginView: View {
             }
             .padding(.horizontal, 50)
             .padding(.bottom, 42)
-            
         }
         .navigationBarHidden(true)
-    }
-    //app deve exibir um alerta dizendo que as informações não são válidas.
-    func isCredentialValid() {
-        if login == "thaisa@performait.com" && password == "Thais@2022" {
-            verified = true
-        } else {
-            showingAlert = true
-        }
-    }
-}
-
-struct ConfStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .padding(.vertical, 16)
-            .padding(.horizontal, 18)
-            .background(Color("textfield"))
-            .cornerRadius(14)
-    }
-}
-
-struct ButtonStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(Font.custom("Poppins-Bold", size: 16))
-            .foregroundColor(.white)
-            .padding(.vertical, 18)
-            .frame(maxWidth: .infinity)
-            .background(Color("purple"))
-            .cornerRadius(99)
-            .shadow(color: Color("purple").opacity(0.3), radius: 10, y: CGFloat(10))
     }
 }
 
